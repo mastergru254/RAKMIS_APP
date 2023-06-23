@@ -94,7 +94,8 @@ class _LoginPageState extends State<LoginPage> {
                         height: 30,
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 35),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 50, vertical: 35),
                         child: MaterialButton(
                           minWidth: double.infinity,
                           onPressed: () {
@@ -103,7 +104,7 @@ class _LoginPageState extends State<LoginPage> {
                                 MaterialPageRoute(
                                     builder: (context) => HomePage()));
                           },
-                          color: Colors.teal,
+                          color: Colors.orange,
                           textColor: Colors.white,
                           child: Text('Login'),
                         ),
