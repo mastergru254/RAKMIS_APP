@@ -29,9 +29,9 @@ class _LoginPageState extends State<LoginPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'Login',
+                'Logo',
                 style: TextStyle(
-                  fontSize: 35,
+                  fontSize: 50,
                   color: Colors.teal,
                   fontWeight: FontWeight.bold,
                 ),
@@ -43,18 +43,25 @@ class _LoginPageState extends State<LoginPage> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: TextFormField(
-                          keyboardType: TextInputType.emailAddress,
-                          decoration: InputDecoration(
-                            labelText: 'Email',
-                            hintText: 'Enter email',
-                            prefixIcon: Icon(Icons.email),
-                            border: OutlineInputBorder(),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,
                           ),
-                          onChanged: (String value) {},
-                          validator: (value) {
-                            return value!.isEmpty ? 'please enter email' : null;
-                          },
+                          child: TextFormField(
+                            keyboardType: TextInputType.emailAddress,
+                            decoration: InputDecoration(
+                              labelText: 'Email',
+                              hintText: 'Enter email',
+                              prefixIcon: Icon(Icons.email),
+                              border: OutlineInputBorder(),
+                            ),
+                            onChanged: (String value) {},
+                            validator: (value) {
+                              return value!.isEmpty
+                                  ? 'please enter email'
+                                  : null;
+                            },
+                          ),
                         ),
                       ),
                       SizedBox(
@@ -62,20 +69,25 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: TextFormField(
-                          keyboardType: TextInputType.visiblePassword,
-                          decoration: InputDecoration(
-                            labelText: 'Password',
-                            hintText: 'Enter password',
-                            prefixIcon: Icon(Icons.password),
-                            border: OutlineInputBorder(),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,
                           ),
-                          onChanged: (String value) {},
-                          validator: (value) {
-                            return value!.isEmpty
-                                ? 'please enter password'
-                                : null;
-                          },
+                          child: TextFormField(
+                            keyboardType: TextInputType.visiblePassword,
+                            decoration: InputDecoration(
+                              labelText: 'Password',
+                              hintText: 'Enter password',
+                              prefixIcon: Icon(Icons.password),
+                              border: OutlineInputBorder(),
+                            ),
+                            onChanged: (String value) {},
+                            validator: (value) {
+                              return value!.isEmpty
+                                  ? 'please enter password'
+                                  : null;
+                            },
+                          ),
                         ),
                       ),
                       SizedBox(
