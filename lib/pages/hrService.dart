@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class HrSelfService extends StatefulWidget {
@@ -10,6 +12,12 @@ class HrSelfService extends StatefulWidget {
 class _HrSelfServiceState extends State<HrSelfService> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      home: Scaffold(
+          appBar: AppBar(
+        centerTitle: true,
+        title: const Text('Hr self service'),
+      )),
+    );
   }
 }
